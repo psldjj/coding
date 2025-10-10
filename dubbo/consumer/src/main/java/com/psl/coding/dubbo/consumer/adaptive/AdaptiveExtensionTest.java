@@ -11,11 +11,11 @@ import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
 /**
  * adaptive,自适应拓展点：
  * 一个SPI接口有多个实现类，需要根据URL中的参数来加载指定的实现类，并调用该类的方法。这就是自适应拓展。
+ * dubbo把一堆根据参数获取实现类的重复代码，全部封装到了代理类中（使用compile生成的代码，比反射性能更好）
  * 举例：Coding接口有两个实现类A和B，现在调用方需要调用Coding的某个方法。
  * @Adaptive 放到方法上，就表示这个方法支持自适应拓展。调用没有@Adaptive的方法会直接抛出异常。
  * @Adaptive 放到实现类上，表示不使用自动生成的代理类，而是使用这个实现类来处理。

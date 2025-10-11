@@ -1,0 +1,2 @@
+injectA=com.psl.coding.dubbo.consumer.inject.InjectObjA
+com.psl.coding.dubbo.consumer.inject.InjectWrapper

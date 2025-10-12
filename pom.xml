@@ -9,7 +9,7 @@
   <url>http://maven.apache.org</url>
   <modules>
     <module>dubbo</module>
-    <module>juc</module>
+    <module>concurrent</module>
     <module>spring</module>
     <module>dubbo/provider</module>
   </modules>

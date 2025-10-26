@@ -1,7 +1,7 @@
 package com.psl.coding;
 
-import jdk.internal.misc.Unsafe;
 
+import jdk.internal.misc.Unsafe;
 import java.util.concurrent.locks.AbstractQueuedSynchronizer;
 import java.util.concurrent.locks.LockSupport;
 

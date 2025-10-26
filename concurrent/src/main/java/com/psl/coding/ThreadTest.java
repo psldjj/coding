@@ -1,10 +1,13 @@
 package com.psl.coding;
 
 import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.Callable;
+import java.util.concurrent.FutureTask;
 
 public class ThreadTest {
     private static volatile  int t = 1;
     public static void main(String[] args) throws InterruptedException {
+
 
 
         ArrayBlockingQueue<Integer> list = new ArrayBlockingQueue<>(10);

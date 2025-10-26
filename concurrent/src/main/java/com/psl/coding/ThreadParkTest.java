@@ -10,21 +10,23 @@ public class ThreadParkTest {
      * */
     public static void main(String[] args) throws InterruptedException {
         Thread thread = new Thread(()->{
-            System.out.println("123");
-//            LockSupport.park();
+
             try {
                 Thread.sleep(500);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
+            System.out.println("123");
+            LockSupport.park();
             System.out.println("456");
             LockSupport.park();
             System.out.println("abc");
         });
         thread.start();
 //        Thread.sleep(1000);
-//        LockSupport.unpark(thread);
         LockSupport.unpark(thread);
+        LockSupport.unpark(thread);
+        System.out.println("unpark");
 //        thread.start();
 
 
